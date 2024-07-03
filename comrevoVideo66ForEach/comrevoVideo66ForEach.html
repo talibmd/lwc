@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Comrevi video 66 for Each loop">
+        
+            <table border="2">
+             <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Education</th>
+                    <th>Age</th>
+                </tr>
+                <template for:each={EmployeeList} for:item="emp">
+                    <tr key={emp.Id}>
+                        <td>{emp.Name}</td>
+                        <td>{emp.Education}</td> 
+                        <td>{emp.Age}</td> 
+                    </tr> 
+                </template>
+             </tbody>
+            </table>
+        </lightning-card>
+  
+</template>

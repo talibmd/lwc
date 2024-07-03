@@ -1,0 +1,42 @@
+<template>
+  <lightning-card title="Search Account records and show in table using Wire">
+        
+            <lightning-input name="AccountName"
+                         onchange={searchAccount}
+                         label="Account Name">
+
+             </lightning-input>
+          <br/>
+
+          <lightning-Button name="result"
+                            label="Search Account in database"
+                            onclick={searchAccount}
+                            variant="brand">
+          </lightning-Button>
+          {resultList}
+         
+         
+
+            <table border="2px" title="Account Records">
+                <tbody>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Industry</th>
+                    <th>Annual Revenue</th>
+                    <th>Account Id</th>
+                </tr>
+                
+                    <template for:each={ResultList} for:item="acc">
+                        <tr key={acc.Id}>
+                            <td>{acc.Name}</td>
+                            <td>{acc.Industry}</td>
+                            <td>{acc.AnnualRevenue}</td>
+                            <td>{acc.Id}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+    
+   
+  </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-input name="Age"
+                      type="number"
+                      onchange={evaluate}
+                      label="Enter Age">
+
+    </lightning-input>
+    <template lwc:if={eligible}>
+        You can vote
+    </template>
+    <template lwc:elseif={notEligible}>
+        You cannot vote
+    </template>
+    <template lwc:else>
+        Enter valid value
+    </template>
+
+</template>

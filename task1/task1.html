@@ -1,0 +1,20 @@
+<template>
+    <lightning-input label="Obtaiuned Marks"
+                      name="OMarks"
+                      type="number"
+                      required="true"
+                      onchange={assign}>
+    </lightning-input>
+    <lightning-input label="Total Marks"
+                      name="TMarks"
+                      type="number"
+                      required="true"
+                      onchange={assign}>
+    </lightning-input>
+    
+   
+    <lightning-output-field value={GradePoint}></lightning-output-field>
+    <button class="slds-button slds-button_brand" onclick={Grade}>Submit</button>
+    
+
+</template>

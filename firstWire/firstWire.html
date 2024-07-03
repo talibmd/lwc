@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Fetched data Using apex">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Account Name</th>
+            </tr>        
+            <template for:each={accList.data} for:item="acc">
+                        <tr key={acc.Id}>
+                            <td>{acc.Id}</td>
+                            <td>{acc.Name}</td>
+                        </tr>
+            </template>    
+        </tbody>   
+        </table>
+    </lightning-card>
+</template>

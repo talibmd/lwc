@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Iterator loop comrevo video 67">
+        <template iterator:cric={cricketerList}>
+            <template if:true={cric.first}>
+                This is first cricketer..</n>
+                {cric.value.Name},{cric.value.Age},{cric.value.Sex}&nbsp;&nbsp;
+            </template>
+            <template if:true={cric.last}>
+                This is last cricketer..{cric.value.Name},{cric.value.Age},{cric.value.Sex}&nbsp;&nbsp;
+            </template>  
+        </template>
+    </lightning-card>
+</template>

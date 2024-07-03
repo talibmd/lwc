@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Wire Demon2">
+        <lightning-input name="PeopleAge"
+                         label="Enter Age"
+                         onchange={saveText}>
+        </lightning-input>
+        
+        <template lwc:if={gradeA}>
+            gradeA
+        </template>
+
+        <template lwc:elseif={gradeB}>
+            gradeB
+        </template>
+        <template lwc:elseif={isBlank}>
+            
+        </template>
+        <template lwc:elseif={gradeC}>
+            gradeC
+        </template>
+
+        <lightning-button name="Result"
+                          label="Show Result"
+                          onclick={searchOpp}>
+        </lightning-button>
+
+
+    </lightning-card>
+</template>

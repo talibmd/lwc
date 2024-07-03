@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Top 15 Opportunities">
+        Hi: {trackOpList}
+        <table aria-multiselectable="true" class="slds-table slds-no-cell-focus slds-table_bordered slds-table_edit slds-table_fixed-layout slds-table_resizable-cols" role="grid" style="width:66.75rem" aria-label="Example default inline edit table with cell focused">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Opportunity Name</th>
+                <th>Stage</th>
+            </tr>
+            <template for:each={trackOpList} for:item="Opp">
+                <tr key={Opp.Id}>
+                    <td>{Opp.Id}</td>
+                    <td>{Opp.Name}</td>
+                    <td>{Opp.StageName}</td>
+                </tr>            
+            </template>    
+        </tbody>
+        </table>
+
+    </lightning-card>
+</template>
