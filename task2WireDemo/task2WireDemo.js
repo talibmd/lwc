@@ -35,6 +35,12 @@ export default class Task2WireDemo extends LightningElement {
                 this.gradeC=false;    
                 this.isBlank=true;
             }
+            if(jsAge>40)
+                {
+                    this.gradeA=false;
+                    this.gradeB=false;
+                    this.gradeC=true;          
+                }
             else
             {
                 this.gradeA=false;
